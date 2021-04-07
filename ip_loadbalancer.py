@@ -87,7 +87,7 @@ class iplb (object):
   to service_ip will be randomly redirected to one of the servers.
   We probe the servers to see if they're alive by sending them ARPs.
   """
-  def __init__ (self, connection, service_ip, servers = [10.0.0.1,10.0.0.2]):
+  def __init__ (self, connection, service_ip, servers = []):
     self.service_ip = IPAddr(service_ip)
     self.servers = [IPAddr(a) for a in servers]
     self.con = connection
